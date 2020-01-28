@@ -3,7 +3,8 @@ public class CaesarCypher{
   //main method
   public static void main(String[] args){
     String s = encrypt("First Legion", 23, 17);
-    System.out.println(s);
+    System.out.println(s+"\n");
+    decrypt(s);
 
   }//fim main
 
@@ -49,4 +50,17 @@ public class CaesarCypher{
 
   }//fim oneKeyCypher
 
+  //decrypt
+  public static void decrypt (String s){
+    String r = "";
+
+    for (int i=1; i<26; i++){
+      for (int j=1; j<26; j++){
+        r = encrypt(s, i, j);
+        System.out.println(r);
+      }
+    }
+
+
+  }//fim decrypt
 }
